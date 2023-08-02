@@ -22,7 +22,7 @@ function StarBackground() {
       'rgb(255, 192, 203)', // Pink
       'rgb(0, 255, 255)'   // Cyan
     ];
-    const numStars = 650;
+    const numStars = 1;
   
     for (let i = 0; i < numStars; i++) {
       const x = Math.random() * canvas.width;
