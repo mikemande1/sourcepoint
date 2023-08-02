@@ -4,6 +4,9 @@ import DevCoveLogo from "../assets/DevCoveLogo.png";
 import { useNavigate } from "react-router-dom";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
+import StarBackground from "./StarBackground";
+
+
 
 
 
@@ -27,10 +30,11 @@ export default function LoginComponent() {
 
   return (
     <div className="container">
-      <div className="box">
-      <div>
+      <img className="DevCoveLogo" src={DevCoveLogo} alt="DevCoveLogo"/>
+      <StarBackground/>
       <div className="login-wrapper">
         <div className="login-wrapper-inner">
+        
           <h1 className="heading">Sign in</h1>
           <p className="sub-heading">Keep yourself up-to-date with what's going on with Developers.</p>
 
@@ -67,13 +71,10 @@ export default function LoginComponent() {
             Join now
           </span>
         </p>
+        
       </div>
+      
     </div>
-    
     </div>
-      </div>
-    </div>
-    
-    
   );
 }

@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { getUniqueID } from "../helpers/getUniqueId";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
-import ThreeScene from "./ThreeScene";
+import StarBackground from "./StarBackground";
+
 
 
 export default function RegisterComponent() {
@@ -33,15 +34,15 @@ export default function RegisterComponent() {
 
   return (
     <div className="container">
-      <div className="box">
+        <img className="DevCoveLogo" src={DevCoveLogo} alt="DevCoveLogo"></img>
+        <StarBackground/>
          <div className="login-wrapper">
           <div className="login-wrapper-left">
             
-            <ThreeScene/>
           </div>
           <div className="login-wrapper-right">
-            <h1 className="heading">Let us help you find connections in the developer space.</h1>
-            <p>Claim your digital identity! Verify your account, set up your profile, and unlock a world of connections.</p>
+            <h1 className="heading">A Developers Home</h1>
+            <p>Join DevCove Today</p>
 
             <div className="auth-inputs">
               <input
@@ -84,7 +85,6 @@ export default function RegisterComponent() {
           </div>
         </div>
       </div>
-    </div>
     
   );
 }
