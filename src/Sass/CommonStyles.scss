@@ -1,0 +1,28 @@
+// Common styles for both login and register components
+$devCoveBlack: black;
+$devCoveOrange: green;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  display: flex;
+  flex: 1;
+  width: 80%;
+  max-width: 1600px;
+  height: 850px;
+  margin: 50px auto;
+  overflow: hidden;
+  border: 1px solid gray;
+  border-radius: 4px;
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $devCoveBlack: black;
 $devCoveOrange: #FFBF00;
 
@@ -176,3 +177,66 @@ body {
 
 
 
+=======
+// LoginComponent.scss
+
+$devCoveBlack: black;
+$devCoveGreen : green;
+
+.login-wrapper-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .auth-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Adjust the gap between input fields
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+
+      &:focus {
+        border-color: $devCoveGreen;
+      }
+    }
+  }
+
+  .login-btn {
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    cursor: pointer;
+    background-color: $devCoveBlack;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    font-family: system-ui;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: $devCoveGreen;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .auth-inputs {
+      max-width: 100%;
+    }
+
+    .login-btn {
+      max-width: 100%;
+    }
+  }
+}
+>>>>>>> origin/main

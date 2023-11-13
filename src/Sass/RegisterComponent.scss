@@ -1,0 +1,72 @@
+// Import common styles
+@import 'CommonStyles';
+
+.register-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .login-wrapper-left {
+    flex: 1;
+    padding: 20px;
+
+    .DevCoveLogo {
+      width: 70%; // Adjust the size as needed
+      display: inline-block;
+    }
+  }
+
+  .login-wrapper-right {
+    flex: 1;
+    padding: 20px;
+
+    .login-wrapper-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .heading {
+        font-family: system-ui;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.9);
+      }
+
+      .sub-heading {
+        margin-top: -20px;
+        font-family: system-ui;
+      }
+
+      .auth-inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+
+        input {
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+
+      .login-btn {
+        width: 300px;
+        height: 50px;
+        cursor: pointer;
+        background-color: $devCoveBlack;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        font-family: system-ui;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      .login-btn:hover {
+        background-color: $devCoveOrange;
+      }
+    }
+  }
+}

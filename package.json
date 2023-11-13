@@ -11,6 +11,10 @@
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "antd": "^5.4.6",
+<<<<<<< HEAD
+=======
+    "create": "^0.0.2",
+>>>>>>> origin/main
     "dat.gui": "^0.7.9",
     "firebase": "^9.23.0",
     "firebase-tools": "^11.24.0",
@@ -18,6 +22,10 @@
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "moment": "^2.29.4",
+<<<<<<< HEAD
+=======
+    "npm": "^10.2.3",
+>>>>>>> origin/main
     "p5": "^1.6.0",
     "quill-emoji": "^0.2.0",
     "react": "^18.2.0",
@@ -31,7 +39,12 @@
     "sass": "^1.58.2",
     "sort-by": "^1.2.0",
     "styled-components": "^6.0.5",
+<<<<<<< HEAD
     "three": "^0.152.2"
+=======
+    "three": "^0.152.2",
+    "yarn": "^1.22.19"
+>>>>>>> origin/main
   },
   "devDependencies": {
     "@svgr/plugin-svgo": "^8.0.1",
@@ -40,6 +53,10 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+<<<<<<< HEAD
     "vite": "^4.4.8"
+=======
+    "vite": "^4.5.0"
+>>>>>>> origin/main
   }
 }
