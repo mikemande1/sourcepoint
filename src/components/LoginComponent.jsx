@@ -30,8 +30,7 @@ export default function LoginComponent() {
 
   return (
     <div className="container">
-      <img className="DevCoveLogo" src={DevCoveLogo} alt="DevCoveLogo"/>
-      <StarBackground/>
+      {/*<StarBackground/>*/}
       <div className="login-wrapper">
         <div className="login-wrapper-inner">
         
