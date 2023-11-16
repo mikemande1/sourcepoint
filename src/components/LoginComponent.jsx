@@ -43,7 +43,6 @@ export default function LoginComponent() {
   const login = async () => {
     try {
       let res = await LoginAPI(credentails.email, credentails.password);
-
       localStorage.setItem("userEmail", res.user.email);
       navigate("/home");
     } catch (err) {
