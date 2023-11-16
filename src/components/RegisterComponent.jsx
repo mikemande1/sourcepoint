@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { getUniqueID } from "../helpers/getUniqueId";
 import "../Sass/RegisterComponent.scss";
 import { toast } from "react-toastify";
-import StarBackground from "./StarBackground";
+import Dragon from "../assets/Dragon.png"
+
 
 // CSS styles for the register container
 const containerStyles = {
@@ -22,7 +23,7 @@ const logoContainerStyles = {
   textAlign: "center",
   display: "flex",
   alignItems: "center", // Center vertically
-  justifyContent: "center", // Center horizontally
+  justifyContent: "flex-end", // Center horizontally
 };
 
 // CSS styles for the scaled-down logo
@@ -71,11 +72,11 @@ export default function RegisterComponent() {
   return (
     <div className="container" style={containerStyles}>
       <div className="login-wrapper" style={logoContainerStyles}>
-        <img src={DevCoveLogo} alt="DevCove Logo" style={logoStyles} />
+        <img src={Dragon} alt="Dragon Photo" style={logoStyles } />
       </div>
       <div className="login-wrapper" style={registerContainerStyles}>
         <div className="login-wrapper-inner">
-          <h1 className="heading">Join DevCove Today</h1>
+          <h1 className="heading" style={{ fontSize: "4em" , marginBottom: "-.10em"}}>Join DevCove Today</h1>
           <p>Your Tech Odyssey Begins Here</p>
 
           <div className="auth-inputs">
@@ -99,7 +100,7 @@ export default function RegisterComponent() {
               }
               type="email"
               className="common-input"
-              placeholder="Email or phone number"
+              placeholder="Email"
             />
             <input
               onChange={(event) =>
@@ -122,7 +123,7 @@ export default function RegisterComponent() {
         <div className="google-btn-container">
           <p className="go-to-signup">
             Already on DevCove?{" "}
-            <span className="join-now" onClick={() => navigate("/")}>
+            <span className="join-now" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
               Sign in
             </span>
           </p>

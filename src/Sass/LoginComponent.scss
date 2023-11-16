@@ -1,7 +1,6 @@
 // LoginComponent.scss
-
-$devCoveBlack: black;
-$devCoveGreen : green;
+// Import common styles
+@import 'CommonStyles';
 
 .login-wrapper-inner {
   display: flex;
@@ -25,7 +24,7 @@ $devCoveGreen : green;
       outline: none;
 
       &:focus {
-        border-color: $devCoveGreen;
+        border-color: $devCoveGrey;
       }
     }
   }
@@ -46,7 +45,7 @@ $devCoveGreen : green;
     margin-top: 20px;
 
     &:hover {
-      background-color: $devCoveGreen;
+      background-color: $devCoveGrey;
     }
   }
   @media screen and (max-width: 600px) {

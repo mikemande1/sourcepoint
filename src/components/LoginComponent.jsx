@@ -4,7 +4,7 @@ import DevCoveLogo from "../assets/DevCoveLogo.png";
 import { useNavigate } from "react-router-dom";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
-import StarBackground from "./StarBackground";
+import Dragon from "../assets/Dragon.png"
 
 // CSS styles for the login container
 const containerStyles = {
@@ -20,7 +20,7 @@ const logoContainerStyles = {
   textAlign: "center",
   display: "flex",
   alignItems: "center", // Center vertically
-  justifyContent: "center", // Center horizontally
+  justifyContent: "flex-end", // Center horizontally
 };
 
 // CSS styles for the scaled-down logo
@@ -50,16 +50,16 @@ export default function LoginComponent() {
       console.log(err);
       toast.error("Please Check your Credentials");
     }
-  };
+  }
 
   return (
     <div className="container" style={containerStyles}>
       <div className="login-wrapper" style={logoContainerStyles}>
-        <img src={DevCoveLogo} alt="DevCove Logo" style={logoStyles} />
+        <img src={Dragon} alt="Dragon" style={logoStyles} />
       </div>
       <div className="login-wrapper" style={loginContainerStyles}>
         <div className="login-wrapper-inner">
-          <h1 className="heading">Sign In</h1>
+          <h1 className="heading" style={{ fontSize: "4em" , marginBottom: "-.10em"}} >DevCove</h1>
           <p className="sub-heading">
           Where Innovation Meets Opportunity
           </p>
@@ -74,7 +74,7 @@ export default function LoginComponent() {
               }
               type="email"
               className="common-input"
-              placeholder="Email or Phone"
+              placeholder="Email"
             />
             <input
               onChange={(event) =>
@@ -100,6 +100,7 @@ export default function LoginComponent() {
             <span
               className="join-now"
               onClick={() => navigate("/register")}
+      style={{ cursor: "pointer" }}
             >
               Join now
             </span>
