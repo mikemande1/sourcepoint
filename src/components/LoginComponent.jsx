@@ -47,7 +47,7 @@ export default function LoginComponent() {
       navigate("/home");
     } catch (err) {
       console.log(err);
-      toast.error("Please Check your Credentials");
+      toast.error("Hmm, something went wrong. Please verify your username and password and try again.");
     }
   }
 

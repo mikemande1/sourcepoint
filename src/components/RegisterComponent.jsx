@@ -6,21 +6,54 @@ import { useNavigate } from "react-router-dom";
 import { getUniqueID } from "../helpers/getUniqueId";
 import "../Sass/LoginComponent.scss";
 import { toast } from "react-toastify";
+import Dragon from "../assets/Dragon.png"
 
+// CSS styles for the login container
+const containerStyles = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100vh",
+};
 
+// CSS styles for the logo container
+const logoContainerStyles = {
+  flex: "1",
+  textAlign: "center",
+  display: "flex",
+  alignItems: "center", // Center vertically
+  justifyContent: "flex-end", // Center horizontally
+};
 
+// CSS styles for the register form container
+const registerContainerStyles = {
+  flex: "1",
+  textAlign: "center",
+  display: "flex",
+  flexDirection: "column", // Adjust the alignment
+};
+
+// CSS styles for the scaled-down logo
+const logoStyles = {
+  width: "70%", // Adjust the width as needed
+  height: "auto",
+};
 
 export default function RegisterComponent() {
   let navigate = useNavigate();
-  const [credentails, setCredentials] = useState({});
+  const [credentials, setCredentials] = useState({});
+
   const register = async () => {
     try {
-      let res = await RegisterAPI(credentails.email, credentails.password);
+      let res = await RegisterAPI(
+        credentials.email,
+        credentials.password
+      );
       toast.success("Account Created!");
       postUserData({
         userID: getUniqueID(),
-        name: credentails.name,
-        email: credentails.email,
+        name: credentials.name,
+        email: credentials.email,
         imageLink:
           "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
       });
@@ -35,11 +68,13 @@ export default function RegisterComponent() {
   return (
     <div className="container" style={containerStyles}>
       <div className="login-wrapper" style={logoContainerStyles}>
-        <img src={Dragon} alt="Dragon Photo" style={logoStyles } />
+        <img src={Dragon} alt="Dragon Photo" style={logoStyles} />
       </div>
       <div className="login-wrapper" style={registerContainerStyles}>
         <div className="login-wrapper-inner">
-          <h1 className="heading" style={{ fontSize: "4em" , marginBottom: "-.10em"}}>Join DevCove Today</h1>
+          <h1 className="heading" style={{ fontSize: "4em", marginBottom: "-.10em" }}>
+            Join DevCove Today
+          </h1>
           <p>Your Tech Odyssey Begins Here</p>
 
           <div className="auth-inputs">
@@ -86,7 +121,11 @@ export default function RegisterComponent() {
         <div className="google-btn-container">
           <p className="go-to-signup">
             Already on DevCove?{" "}
-            <span className="join-now" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
+            <span
+              className="join-now"
+              onClick={() => navigate("/")}
+              style={{ cursor: "pointer" }}
+            >
               Sign in
             </span>
           </p>
