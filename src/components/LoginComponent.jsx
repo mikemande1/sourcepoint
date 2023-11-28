@@ -53,9 +53,6 @@ export default function LoginComponent() {
 
   return (
     <div className="container" style={containerStyles}>
-      <div className="login-wrapper" style={logoContainerStyles}>
-        <img src={Dragon} alt="Dragon" style={logoStyles} />
-      </div>
       <div className="login-wrapper" style={loginContainerStyles}>
         <div className="login-wrapper-inner">
           <h1 className="heading" style={{ fontSize: "4em" , marginBottom: "-.10em"}} >DevCove</h1>
